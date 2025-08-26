@@ -1,0 +1,345 @@
+html {
+    background-color: var(--bg-color);
+    scroll-padding-top: 120px;
+    scroll-behavior: smooth
+}
+
+body {
+    /* Add a background color or image */
+    background-color: var(--bg-color); /* see bottom of file for color variables */
+
+    /* Customize the default size, color, and font for text*/
+    font-size: 16px;
+    color: var(--text-color);
+    font-family: Tahoma, sans-serif; /* This tells the browser: "Try to use `Tahoma`, and if you can't find it, use any sans-serif font." */
+
+    /* Put space around the edges of the webpage */
+    margin: 50px;
+}
+
+html, body {
+  transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+#navbar {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  padding: 5px 20px; 
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  background-color: #0f1324;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#left-images {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+}
+
+#right-buttons {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+#colorstack-header-img {
+  padding-left: 20px;
+  padding-right: 20px;
+  width: 200px;
+  height: 35px;
+  bottom: 30px;
+  min-width: 0;
+}
+
+#purdue-header-img {
+  padding-left: 10px;
+  width: 70px;
+  height: 70px;
+  min-width: 0;
+}
+
+#apperence-img {
+  width: 30px
+}
+
+.nav-text {
+  font-size: 30px;
+}
+
+.navbar-buttons {
+  background-color: #0f1324;
+  font-size: 15px;
+  min-width: 0;
+}
+
+.navbar-buttons:hover {
+    color: rgb(0, 157, 157);
+}
+
+
+.navbar-link {
+  color: white;
+  text-decoration: none;
+  padding: 8px 16px;
+  background: transparent;
+
+}
+
+.navbar-link:hover {
+  color: rgb(0, 157, 157)
+}
+
+#member-button {
+  background-color: #0f1324;
+  border-radius: 30px;
+  border: 1px solid white;
+  padding: 10px;
+  margin-right: 10px;
+  transition: background-color 0.4s ease;
+  min-width: 0;
+}
+
+#member-button:hover {
+  background-color: #fbb800;
+  color: black;
+  border-color: #fbb800;
+}
+
+#home {
+  margin-top: 200px;
+  margin-bottom: 10px;
+}
+
+
+#home {
+  display: flex;
+  margin-top: 200px;
+  margin-right: 130px;
+  margin-left: 130px;
+  margin-bottom: -40px;
+}
+
+#title {
+  font-size: 100px;
+}
+
+#logo-div {
+  margin-left: 20px;
+  margin-top: 90px;
+}
+
+#logo {
+  border-radius: 200px;
+  border: 2px solid black;
+}
+
+.title-word1 {
+  color: #cfb991;
+}
+
+.title-word2 {
+  color: #fbb800;
+}
+
+.title-word3 {
+  color: rgb(0, 157, 157);
+}
+
+#event-schedule {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
+  flex-wrap: wrap;
+  overflow-wrap: break-word;
+  margin-bottom: 200px;
+}
+
+.events-items {
+  margin: 20px;
+  border-radius: 10px;
+  flex-wrap: wrap;
+  width: 400px;              
+  min-height: 200px;
+  overflow-wrap: break-word;
+  padding: 14px;
+  background-color: white;
+  border: 0.5px solid white;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.h2-section-title {
+  display: flex;
+  justify-content: center;
+  margin-top: 100px
+}
+
+#about-section {
+  display: flex;
+  margin-bottom: 100px;
+  margin-left: -50px;
+  margin-right: -60px;
+}
+
+#about-text {
+  background-color: #0f1324;
+  font-size: 20px;
+  color: white;
+  padding: 20px;
+  margin: 0;
+  border: 0.5px solid white;
+  border-left: #0f1324;
+}
+
+.event-buttons {
+  display: flex;
+  justify-content: center;
+}
+
+.rsvp-button {
+  font-size: 20px;
+  background-color: #fbb800;
+  padding: 15px;
+  color: black;
+  border-radius: 15px;
+}
+
+.rsvp-button:hover {
+  background-color: #d59d01;
+  cursor: pointer;
+}
+
+.rsvp-form {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.rsvp-form input {
+  display: block;
+  margin-bottom: 5px;
+  padding: 8px;
+  width: 95%;
+  max-width: 300px;
+}
+
+.rsvp-form button {
+  padding: 8px 16px;
+  background-color: #221f1f;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.rsvp-form button:hover {
+  background-color: #333;
+}
+
+#no-events {
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+    height: 100%;
+    text-align: center;     
+}
+
+.modal {
+  display: none;             
+  position: fixed;             
+  z-index: 2;                  
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+
+  background-color: rgba(0, 0, 0, 0.4);
+
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-container {
+  background-color: lightsteelblue;
+  padding: 40px;
+  border-radius: 15px;
+  width: 80%;
+  max-width: 400px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  font-family: sans-serif;
+  text-align: center;
+}
+
+#modal-text {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+#modal-image {
+  width: 100px;
+  height: auto;
+  transition: transform 0.3s ease-in-out;
+}
+
+a,
+a * {
+  color: inherit;           
+  text-decoration: none;
+}
+
+button {
+    background-color: green;    
+    color: white;               
+    border: none;               
+    padding: 5px 12px;           
+    border-radius: 5px;         
+    cursor: pointer;            
+}
+
+#links {
+  background-color: #0f1324;
+  display: flex;
+  justify-content: space-evenly; 
+  flex-wrap: wrap;
+  padding: 40px 20px;
+  margin-top: 100px;
+  width: 100%;
+  box-sizing: border-box;
+  color: white;
+}
+
+#modal-image {
+  width: 100px;
+  height: auto;
+  transition: transform 0.3s ease-in-out;
+}
+
+:root {
+    /* Light Mode */
+    --bg-color: #ffffff;
+    --text-color: #231942;
+
+    /* Dark Mode */
+    --bg-color-dark-mode: #3e3377;
+    --text-color-dark-mode: #fff;
+
+    /* Accent Colors */
+    --accent-color-light: #d2cff5;
+    --accent-color-medium: #684fb5;
+    --accent-color-dark: #482f95;
+    --accent-color-darkest: #231942;
+    --accent-color-green: #28eb76;
+
+    /* Error Colors */
+    --error-color: #f8bbd0;
+    --error-color-border: #e63946;
+}
