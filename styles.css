@@ -115,44 +115,104 @@ html, body {
 }
 
 #home {
-  margin-top: 200px;
-  margin-bottom: 10px;
+  padding: 120px 24px 32px; /* top space below navbar + side breathing room */
 }
 
+.home-inner {
+  max-width: 1100px;       /* center the content like in the screenshot */
+  margin: 0 auto;
+}
 
-#home {
+/* Two-column hero: title left, logo right */
+#title-div {
   display: flex;
-  margin-top: 200px;
-  margin-right: 130px;
-  margin-left: 130px;
-  margin-bottom: -40px;
+  align-items: center;
+  justify-content: space-between;
+  gap: 48px;
 }
 
+/* Big stacked title */
 #title {
-  font-size: 100px;
+  margin: 0;
+  font-weight: 800;
+  line-height: 0.95;
+  letter-spacing: -0.5px;
+  font-size: 120px; /* responsive: caps at ~120px */
 }
+#title span { display: block; }       /* stack each word on its own line */
 
-#logo-div {
-  margin-left: 20px;
-  margin-top: 90px;
-}
+/* Brand colors */
+.title-word1 { color: #cfb991; }              /* Purdue gold (muted) */
+.title-word2 { color: #fbb800; }              /* bright yellow */
+.title-word3 { color: rgb(0, 157, 157); }     /* teal */
+
+/* Logo on the right */
+#logo-div { flex: 0 0 auto; }
 
 #logo {
-  border-radius: 200px;
-  border: 2px solid black;
+  width: clamp(120px, 18vw, 220px);
+  height: clamp(120px, 18vw, 220px);
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #0e1324;  /* matches your nav theme */
+  box-shadow: 0 6px 20px rgba(0,0,0,0.15);
 }
 
-.title-word1 {
-  color: #cfb991;
+/* Tagline under the hero */
+.tagline {
+  margin: 28px 0 0;
+  font-weight: 700;
+  font-size: clamp(14px, 1.4vw, 18px);
 }
 
-.title-word2 {
-  color: #fbb800;
+/* Mobile: stack logo under title */
+@media (max-width: 768px) {
+  #title-div {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 24px;
+  }
+  #logo { width: 160px; height: 160px; }
 }
 
-.title-word3 {
-  color: rgb(0, 157, 157);
+:root{
+  --gold: #cfb991;           /* Purdue muted gold */
+  --yellow: #fbb800;         /* bright Indy yellow */
+  --teal:  rgb(0,157,157);   /* ColorStack teal */
 }
+
+/* Big, bold, responsive hero title */
+#hero-title{
+  margin: 0;
+  font-weight: 800;
+  line-height: 0.95;
+  letter-spacing: -0.5px;
+  /* responsive from ~56px up to ~120px */
+  font-size: clamp(56px, 8vw, 120px);
+}
+
+/* First row keeps Purdue + Indy on one line */
+#hero-title .line1{
+  display: inline-flex;
+  gap: 0.25em;      /* space between words */
+}
+
+/* Second row forced onto its own line */
+#hero-title .line2{
+  display: block;   /* new line */
+  margin-top: 0.15em;
+}
+
+/* Brand colors */
+#hero-title .purdue{ color: var(--gold); }
+#hero-title .indy{   color: var(--yellow); }
+#hero-title .line2{  color: var(--teal); }
+
+/* Optional: slightly smaller second line (like the screenshot) */
+@media (min-width: 600px){
+  #hero-title .line2{ font-size: 0.92em; }
+}
+
 
 #event-schedule {
   display: flex;

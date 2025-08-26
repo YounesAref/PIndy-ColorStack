@@ -179,12 +179,3 @@ function addParticpantsEvent3(event) {
 const event1Submit = document.getElementById("event1-submit");
 const event2Submit = document.getElementById("event2-submit");
 const event3Submit = document.getElementById("event3-submit");
-
-
-
-
-
-
-
-
-
